@@ -2,7 +2,7 @@ import jsonp from "jsonp";
 import { message } from "antd";
 import ajax from "./ajax";
 
-const BASE = "";
+const BASE = "http://localhost:5000";
 
 // 登录
 export function reqLogin(username, password) {
