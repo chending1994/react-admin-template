@@ -19,6 +19,7 @@ export default class PicturesWall extends React.Component {
     previewVisible: false, // 标识是否显示大图预览Modal
     previewImage: '', // 大图的url
     fileList: [],
+    serveURL: process.env.REACT_APP_BASE_URL
   }
 
   constructor (props) {
@@ -109,7 +110,7 @@ export default class PicturesWall extends React.Component {
     return (
       <div>
         <Upload
-          action="/manage/img/upload" /*上传图片的接口地址*/
+          action={ process.env.REACT_APP_BASE_URL + "/manage/img/upload"} /*上传图片的接口地址*/
           accept='image/*'  /*只接收图片格式*/
           name='image' /*请求参数名*/
           listType="picture-card"  /*卡片样式*/

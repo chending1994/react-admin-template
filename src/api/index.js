@@ -2,7 +2,7 @@ import jsonp from "jsonp";
 import { message } from "antd";
 import ajax from "./ajax";
 
-const BASE = "http://localhost:5000";
+const BASE = process.env.REACT_APP_BASE_URL;
 
 // 登录
 export function reqLogin(username, password) {
